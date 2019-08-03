@@ -1,0 +1,17 @@
+service: orient
+
+provider:
+  name: aws
+  runtime: python3.6
+
+functions:
+  troll:
+    handler: lambda.handler
+    events:
+    - schedule: cron(0 * * * ? *)
+
+plugins:
+  - serverless-python-requirements
+custom:
+  pythonRequirements:
+    dockerizePip: True
