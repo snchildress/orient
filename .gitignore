@@ -1,2 +1,10 @@
 # Dependencies
 /venv
+
+# Sensitive data
+*.env
+!example.env
+
+# Cruft
+/__pycache__
+.DS_Store
