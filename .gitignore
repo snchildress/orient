@@ -1,6 +1,7 @@
-# Dependencies
+# Dependencies and builds
 /venv
 /node_modules
+/.serverless
 
 # Sensitive data
 *.env
