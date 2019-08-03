@@ -3,12 +3,14 @@ service: orient
 provider:
   name: aws
   runtime: python3.6
+  stage: prod
 
 functions:
   troll:
     handler: lambda.handler
     events:
-    - schedule: cron(0 * * * ? *)
+      - schedule: cron(0 * * * ? *)
+    environment: ${file(prod.env.yml)}
 
 plugins:
   - serverless-python-requirements
